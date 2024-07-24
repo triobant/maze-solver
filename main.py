@@ -11,3 +11,7 @@ class Window:
 
     def wait_for_close(self):
         ...
+
+
+    def close(self):
+        ...
