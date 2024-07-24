@@ -15,3 +15,11 @@ class Window:
 
     def close(self):
         ...
+
+
+def main():
+    ...
+
+
+if __name__ == '__main__':
+    main()
