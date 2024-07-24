@@ -7,3 +7,7 @@ class Window:
 
     def redraw(self):
         ...
+
+
+    def wait_for_close(self):
+        ...
