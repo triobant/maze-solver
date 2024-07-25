@@ -1,8 +1,11 @@
 from tkinter import Tk, BOTH, Canvas
 
 class Window:
-    def __init__(self):
-        ...
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+        self.widget = Tk()
+        self.title = self.widget.title()
 
 
     def redraw(self):
