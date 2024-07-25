@@ -4,8 +4,8 @@ class Window:
     def __init__(self, width, height):
         self.width = width
         self.height = height
-        self.widget = Tk()
-        self.title = self.widget.title()
+        self.__root = Tk()
+        self.title = self.__root.title()
 
 
     def redraw(self):
