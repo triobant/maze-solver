@@ -6,6 +6,9 @@ class Window:
         self.height = height
         self.__root = Tk()
         self.title = self.__root.title()
+        self.canvas = Canvas(self.__root)
+        self.pack = self.canvas.pack()
+        self.run = False
 
 
     def redraw(self):
