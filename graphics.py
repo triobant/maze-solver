@@ -32,4 +32,14 @@ class Point:
 
 
 class Line:
-    ...
+    def __init__(
+        self,
+        point1,
+        point2,
+    ):
+        self.p1 = point1
+        self.p2 = point2
+
+
+    def draw():
+        ...
