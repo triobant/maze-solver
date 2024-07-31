@@ -50,11 +50,3 @@ class Line:
         canvas.create_line(
             self.p1.x, self.p1.y, self.p2.x, self.p2.y, fill=fill_color, width=2
         )
-
-
-class Cell:
-    def __init__(self):
-        self.has_left_wall = None
-        self.has_right_wall = None
-        self.has_top_wall = None
-        self.has_bottom_wall = None
