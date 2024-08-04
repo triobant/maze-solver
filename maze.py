@@ -24,7 +24,7 @@ class Maze:
        self._win = win
 
 
-       self._create_cells(self)
+       self._create_cells()
 
 
     def _create_cells(self):
