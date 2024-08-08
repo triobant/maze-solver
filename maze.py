@@ -26,6 +26,10 @@ class Maze:
        self._seed = seed
 
 
+       if self._seed is not None:
+           random.seed(seed)
+
+
        self._create_cells()
        self._break_entrance_and_exit()
 
