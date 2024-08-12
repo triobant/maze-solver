@@ -81,3 +81,6 @@ class Maze:
             # right
             if i < self._num_cols - 1 and not self._cells[i + 1][j].visited:
                 next_index_list.append((i + 1, j))
+            # up
+            if j > 0 and not self._cells[i][j - 1].visited:
+                next_index_list.append((i, j - 1))
