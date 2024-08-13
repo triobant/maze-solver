@@ -87,3 +87,9 @@ class Maze:
             # bottom
             if j < self._num_rows - 1 and not self._cells[i][j + 1].visited:
                 next_index_list.append((i, j + 1))
+
+
+            # break out, if there is nowhere to go from here
+            if len(next_index_list) == 0:
+                self._draw_cell(i, j)
+                return
