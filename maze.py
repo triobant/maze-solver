@@ -93,3 +93,8 @@ class Maze:
             if len(next_index_list) == 0:
                 self._draw_cell(i, j)
                 return
+
+
+            # randomly choose the next direction to go towards
+            direction_index = random.randrange(len(next_index_list))
+            next_index = next_index_list[direction_index]
