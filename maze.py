@@ -98,3 +98,11 @@ class Maze:
             # randomly choose the next direction to go towards
             direction_index = random.randrange(len(next_index_list))
             next_index = next_index_list[direction_index]
+
+
+            # remove walls between this cell and the next cell(s)
+            # right
+            if next_index[0] == i + 1:
+                self._cells[i][j].has_right_wall = False
+                self._cells[i + 1][j].has_left_wall = False
+            # left
