@@ -109,3 +109,7 @@ class Maze:
             if next_index[0] == i - 1:
                 self._cells[i][j].has_left_wall = False
                 self._cells[i - 1][j].has_right_wall = False
+            # down
+            if next_index[1] == j + 1:
+                self._cells[i][j].has_bottom_wall = False
+                self._cells[i][j + 1].has_top_wall = False
