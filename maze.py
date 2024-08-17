@@ -128,3 +128,11 @@ class Maze:
         for col in self._cells:
             for cell in col:
                 cell.visited = False
+
+
+    def solve(self):
+        self._solve_r(0, 0)
+
+
+    def _solve_r(self, i, j):
+        ...
