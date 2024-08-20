@@ -130,8 +130,22 @@ class Maze:
                 cell.visited = False
 
 
+    # returns True if this is the end cell, OR if it leads to the end cell
+    # returns False if this is a loser cell
     def _solve_r(self, i, j):
         self._animate()
+
+
+        # visit current cell
+        self._cells[i][j].visited = True
+
+
+        # if we are at the end cell -> done!
+        if i == self._num_cols - 1 and j == self._num_rows - 1:
+            return True
+
+
+        #
 
 
     def solve(self):
