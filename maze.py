@@ -158,6 +158,17 @@ class Maze:
                 self._cells[i][j].draw_move(self._cells[i - 1][j], True)
 
 
+        # move right, if there is no wall and it hasn't been visited
+        if (
+            i < self._num_cols - 1
+            and not self._cells[i][j].has_right_wall
+            and not self._cells[i + 1][j].visited
+        ):
+            self._cells[i][j].draw_move(self._cells[i + 1][j])
+            if self._solve_r(i + 1, j):
+                return True
+            else:
+                self._cells[i][j].draw_move(self._cells[i + 1][j], True)
 
 
     # create the moves for the solution using a depth first search
