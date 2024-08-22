@@ -184,6 +184,23 @@ class Maze:
                 self._cells[i][j].draw_move(self._cells[i][j - 1], True)
 
 
+        # move down, if there is no wall and it hasn't been visited
+        if (
+            j < self._num_rows - 1
+            and not self._cells[i][j].has_bottom_wall
+            and not self._cells[i][j + 1].visited
+        ):
+            self._cells[i][j].draw_move(self._cells[i][j + 1])
+            if self._solve_r(i, j + 1):
+                return True
+            else:
+                self._cells[i][j].draw_move(self._cells[i][j + 1], True)
+
+
+        # went the wrong way - returning False to let the previous cell know
+        return False
+
+
     # create the moves for the solution using a depth first search
     def solve(self):
         return self._solve_r(0, 0)
